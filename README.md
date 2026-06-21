@@ -36,6 +36,30 @@ npm run remotion:studio
 npm run remotion:render
 ```
 
+默认会生成：
+
+```text
+out/studio-lottery-live-draw.mp4
+```
+
+这个视频模板使用 `public/studio-background.png` 作为演播室背景，并在摇奖机圆筒区域叠加 47 个带高光、阴影和编号的真实感号码球，随后依次摇出 7 个号码到顶部开奖框。若要严格使用自己的演播室原图，请把图片覆盖保存为：
+
+```text
+public/studio-background.png
+```
+
+然后重新运行：
+
+```bash
+npm run remotion:render
+```
+
+保留的简版开奖视频命令：
+
+```bash
+npm run remotion:render:simple
+```
+
 ## 可选环境变量
 
 新建 `.env` 后可按需配置：
