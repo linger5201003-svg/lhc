@@ -11,6 +11,8 @@
     "check": "tsc --noEmit",
     "remotion:studio": "remotion studio src/remotion/index.ts",
     "remotion:render": "remotion render src/remotion/index.ts StudioLotteryLiveDraw out/studio-lottery-live-draw.mp4",
+    "remotion:render:no-animation": "remotion render src/remotion/index.ts RealFootageCustomDraw out/real-footage-custom-draw.mp4",
+    "remotion:render:no-animation:demo": "remotion render src/remotion/index.ts RealFootageCustomDraw out/real-footage-custom-draw.mp4 --props='{\"numbers\":[3,8,16,22,29,35,47],\"period\":\"20260621-002\"}'",
     "remotion:render:simple": "remotion render src/remotion/index.ts LotteryDraw out/lottery-draw.mp4"
   },
   "repository": {

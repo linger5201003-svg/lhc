@@ -1,6 +1,10 @@
 import {AbsoluteFill, Composition, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import type {CSSProperties} from 'react';
 
+import {
+  RealFootageCustomDraw,
+  realFootageCustomDrawDefaults,
+} from './RealFootageCustomDraw';
 import {StudioLotteryVideo} from './StudioLotteryVideo';
 
 const drawNumbers = [3, 12, 18, 24, 32, 41, 49];
@@ -22,6 +26,15 @@ export function RemotionRoot() {
         fps={30}
         height={1080}
         id="StudioLotteryLiveDraw"
+        width={1920}
+      />
+      <Composition
+        component={RealFootageCustomDraw}
+        defaultProps={realFootageCustomDrawDefaults}
+        durationInFrames={360}
+        fps={30}
+        height={1080}
+        id="RealFootageCustomDraw"
         width={1920}
       />
     </>
