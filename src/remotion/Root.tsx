@@ -1,18 +1,30 @@
 import {AbsoluteFill, Composition, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import type {CSSProperties} from 'react';
 
+import {StudioLotteryVideo} from './StudioLotteryVideo';
+
 const drawNumbers = [3, 12, 18, 24, 32, 41, 49];
 
 export function RemotionRoot() {
   return (
-    <Composition
-      component={LotteryDraw}
-      durationInFrames={180}
-      fps={30}
-      height={1080}
-      id="LotteryDraw"
-      width={1920}
-    />
+    <>
+      <Composition
+        component={LotteryDraw}
+        durationInFrames={180}
+        fps={30}
+        height={1080}
+        id="LotteryDraw"
+        width={1920}
+      />
+      <Composition
+        component={StudioLotteryVideo}
+        durationInFrames={360}
+        fps={30}
+        height={1080}
+        id="StudioLotteryLiveDraw"
+        width={1920}
+      />
+    </>
   );
 }
 
